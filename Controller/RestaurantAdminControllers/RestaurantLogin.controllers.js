@@ -1,4 +1,4 @@
-const restroOwner = require('../model/RestroOwnerSchema')
+const restroOwner = require('../../model/RestroOwnerSchema')
 const bcrypt = require('bcrypt')
 require('dotenv').config();
 const jwt = require('jsonwebtoken')
