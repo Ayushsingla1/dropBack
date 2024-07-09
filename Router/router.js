@@ -2,8 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 
-const {AdminLogin} = require('../Controller/Admin');
-const {MallAdminLogin} = require('../Controller/MallAdmin');
+const {AdminLogin} = require('../Controller/AdminControllers/AdminLogin.controllers');
+const {MallAdminLogin} = require('../Controller/MallAdminControllers/MallLogin.controllers');
 
 
 router.get('/adminLogin',AdminLogin);

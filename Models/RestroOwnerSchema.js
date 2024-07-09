@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+// ye wala schema ki jarurat nhi hain, delete mar dena
+
 const restroOwnerSchema = new mongoose.Schema(
     {
         restroName : {

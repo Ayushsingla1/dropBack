@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+// ye wala schema ki jarurat nhi hain, delete mar dena
+
 const mallOwnerSchema = new mongoose.Schema({
     mallName : {
         type : String,
