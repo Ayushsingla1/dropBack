@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 // ye wala schema ki jarurat nhi hain, delete mar dena
 
-const mallOwnerSchema = new mongoose.Schema({
+const Malls = new mongoose.Schema({
     mallName : {
         type : String,
         require : true,
@@ -18,7 +18,13 @@ const mallOwnerSchema = new mongoose.Schema({
     mallId : {
         type : Number,
         reqiure : true,
-    }
+    },
+    restaurants: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Restaurants"
+        }
+    ],
 })
 
-module.exports = mongoose.model('mallOwner',mallOwnerSchema);
+module.exports = mongoose.model('Malls',Mall);

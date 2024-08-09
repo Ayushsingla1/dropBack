@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const foodItemSchema = new mongoose.Schema(
+const dishes = new mongoose.Schema(
     {
         item : {
             type : String,
@@ -22,9 +22,13 @@ const foodItemSchema = new mongoose.Schema(
             require : true,
         },
         restroId : {
-            type : Number,
-            require : true,
-        }
+            type : mongoose.Schema.Types.ObjectId,
+            ref: "restaurants"
+        },
+        mallId : {
+            type : mongoose.Schema.Types.ObjectId,
+            ref: "malls"
+        },
     }
 )
-module.exports = mongoose.model('FoodItem',foodItemSchema);
+module.exports = mongoose.model('dishes',dishes);
